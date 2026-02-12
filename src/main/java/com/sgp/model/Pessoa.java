@@ -30,11 +30,42 @@ public class Pessoa {
 
 
     //Getters e Setters
+    //Métodos de acesso e modificação para os atributos privados
     
     //Get (Métodos de acesso para nome)
     public String getNome(){
         return nome;
     }
+
+    //Get (Métodos de acesso para idade)
+    public int getIdade(){  
+        return idade;
+    }     
+
+    //Set (Métodos de modificação para nome)
+    public void setNome(String nome){
+        this.nome = nome;
+    }       
+
+    //Set (Métodos de modificação para idade)  
+    public void setIdade(int idade){
+        this.idade = idade;
+    }
+
+
+    //Métodos de Sobrescrita (Override)
+    //Exemplo de sobrescrita do método toString para exibir informações da pessoa
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                '}';
+    }
+
+
+
+
 
 
 
