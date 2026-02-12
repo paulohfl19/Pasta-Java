@@ -1,28 +1,32 @@
-    package main.java.com.sgp.app;    
-    
-    
-    
-    
-    public class Main {
+    package main.java.com.sgp.app;
+
+    import main.java.com.sgp.model.Pessoa;
+
+public class Main {
     
         public static void main(String[] args) {
+            
+            Pessoa pessoanula = null;
+
             //Criando um objeto da classe Pessoa usando o construtor parametrizado
-            Pessoa aluno = new Pessoa(nome: "Paulo", idade: 16);
-            aluno.saudacao(); // Saída: Olá, Paulo! Você tem 16 anos
+            Pessoa aluno = new Pessoa("Paulo",12);
+            
+            Pessoa pessoaPadrao = new Pessoa();
 
-            //Criando um objeto da classe Pessoa usando o construtor padrão
-            Pessoa aluno2 = new Pessoa();
-            aluno2.saudacao(); // Saída: Olá, Paulo! Você tem 16 anos
-
-            //Modificando os atributos do objeto pessoa2 usando os setters
-            aluno2.setNome("João");
-            aluno2.setIdade(30);
-            aluno2.saudacao(); // Saída: Olá, João! Você tem 30 anos
-
-            //Exibindo as informações dos objetos usando o método toString
-            System.out.println(aluno2); // Saída: Pessoa{nome='Maria', idade=25}
-            System.out.println(aluno2); // Saída: Pessoa{nome='João', idade=30}
         }
+    
+        public void imprimirPessoa(Pessoa pessoa) {
+            if (pessoa == null) {
+                System.out.println("Pessoa não inicializada");
+            return;
+            }   
+        pessoa.saudacao();
+        System.out.println(pessoa.toString());
+        
+    
+    
+    
+    
     }
 
-
+}
